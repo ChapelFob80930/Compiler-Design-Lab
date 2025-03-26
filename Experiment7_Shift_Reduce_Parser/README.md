@@ -1,11 +1,11 @@
-gedit lexer.l
-gedit parser.y
-lex lexer.l
-yacc parser.y
+gedit lexer.l\
+gedit parser.y\
+lex lexer.l\
+yacc parser.y\
 
-gcc -o parser lex.yy.c y.tab.c -lfl
+gcc -o parser lex.yy.c y.tab.c -lfl\
 
-./parser
-Enter an arithmetic expression:
-3+4*(5-2) [after typing this press ctrl+D]
-Result: 15
+./parser\
+Enter an arithmetic expression:\
+3+4*(5-2) [after typing this press ctrl+D]\
+Result: 15\

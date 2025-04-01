@@ -3,7 +3,7 @@
 %%
 [0-9]+[.][0-9]+ printf("%s is a floating point number\n",yytext);
 int|float|char|double|void printf("%s is a datatype\n", yytext);
-[+0-9]+[()] printf("%s is a function\n", yytext);
+[a-zA-Z]+[()] printf("%s is a function\n", yytext);
 [0-9]+ printf("%s is an integer\n", yytext);
 [a-z]+ printf("%s is an identifier\n", yytext);
 [+=*/-]+ printf("%s is an operation\n", yytext);

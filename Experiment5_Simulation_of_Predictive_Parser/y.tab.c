@@ -71,8 +71,10 @@
 
 #include<stdio.h>
 #include<stdlib.h>
+int yyerror(char *s);
+int yylex();
 
-#line 76 "y.tab.c"
+#line 78 "y.tab.c"
 
 # ifndef YY_CAST
 #  ifdef __cplusplus
@@ -547,8 +549,8 @@ static const yytype_int8 yytranslate[] =
 /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
 static const yytype_int8 yyrline[] =
 {
-       0,    11,    11,    13,    14,    15,    16,    17,    18,    19,
-      20,    21
+       0,    13,    13,    15,    16,    17,    18,    19,    20,    21,
+      22,    23
 };
 #endif
 
@@ -1114,67 +1116,67 @@ yyreduce:
   switch (yyn)
     {
   case 2: /* S: T  */
-#line 11 "parser.y"
+#line 13 "parser.y"
       {printf("Result = %d\n",yyval);}
-#line 1120 "y.tab.c"
+#line 1122 "y.tab.c"
     break;
 
   case 3: /* T: T '+' T  */
-#line 13 "parser.y"
+#line 15 "parser.y"
             {yyval=yyvsp[-2]+yyvsp[0];}
-#line 1126 "y.tab.c"
+#line 1128 "y.tab.c"
     break;
 
   case 4: /* T: T '-' T  */
-#line 14 "parser.y"
+#line 16 "parser.y"
            {yyval=yyvsp[-2]-yyvsp[0];}
-#line 1132 "y.tab.c"
+#line 1134 "y.tab.c"
     break;
 
   case 5: /* T: T '*' T  */
-#line 15 "parser.y"
+#line 17 "parser.y"
             {yyval=yyvsp[-2]*yyvsp[0];}
-#line 1138 "y.tab.c"
+#line 1140 "y.tab.c"
     break;
 
   case 6: /* T: T '/' T  */
-#line 16 "parser.y"
+#line 18 "parser.y"
             {yyval=yyvsp[-2]/yyvsp[0];}
-#line 1144 "y.tab.c"
+#line 1146 "y.tab.c"
     break;
 
   case 7: /* T: '-' NUMBER  */
-#line 17 "parser.y"
+#line 19 "parser.y"
                {yyval=-yyvsp[0];}
-#line 1150 "y.tab.c"
+#line 1152 "y.tab.c"
     break;
 
   case 8: /* T: '-' ID  */
-#line 18 "parser.y"
+#line 20 "parser.y"
            {yyval=-yyvsp[0];}
-#line 1156 "y.tab.c"
+#line 1158 "y.tab.c"
     break;
 
   case 9: /* T: '(' T ')'  */
-#line 19 "parser.y"
+#line 21 "parser.y"
             {yyval=yyvsp[-1];}
-#line 1162 "y.tab.c"
+#line 1164 "y.tab.c"
     break;
 
   case 10: /* T: NUMBER  */
-#line 20 "parser.y"
+#line 22 "parser.y"
            {yyval=yyvsp[0];}
-#line 1168 "y.tab.c"
+#line 1170 "y.tab.c"
     break;
 
   case 11: /* T: ID  */
-#line 21 "parser.y"
+#line 23 "parser.y"
        {yyval=yyvsp[0];}
-#line 1174 "y.tab.c"
+#line 1176 "y.tab.c"
     break;
 
 
-#line 1178 "y.tab.c"
+#line 1180 "y.tab.c"
 
       default: break;
     }
@@ -1367,7 +1369,7 @@ yyreturnlab:
   return yyresult;
 }
 
-#line 23 "parser.y"
+#line 25 "parser.y"
 
 
 int main()
